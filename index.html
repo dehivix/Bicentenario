@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Bicentenario - UNERG</title>
+
+<!-- meta-tags para google -->
+<meta http-equiv="Content-Type" content="text/html charset=utf-8">
+<meta name="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+<meta name="author" content="dehivix" >
+<meta name="REPLY-TO" CONTENT="oliver0506@hotmail.com">
+<LINK REV="made" href="mailto:oliver0506@hotmail.com">
+<meta name="DESCRIPTION" CONTENT="Bicentenario Venezuela">
+<meta name="KEYWORDS" CONTENT="bicentenario, independencia, venezuela">
+<meta name="Resource-type" CONTENT="Document">
+<meta name="Revisit-after" CONTENT="1 days">
+<meta name="robots" content="ALL">
+
+
+
+<!-- CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/galeria.css" />
+<link rel="stylesheet" type="text/css" href="css/lighbox.css" />
+<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon/logo.ico">
+
+<!-- JavaScripts-->
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="js/s3Slider.js"></script>
+<script type="text/javascript" src="js/jquery-easing-1.3.pack.js"></script>
+<script type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+<script type="text/javascript" src="js/coda-slider.1.1.1.pack.js"></script> 
+<script type="text/javascript" src="js/funcion.js"></script>
+
+<!-- Funcion para tooltip -->
+<script type="text/javascript">
+$(function() {
+	// modify global settings
+	$.extend($.fn.Tooltip.defaults, {
+		track: true,
+		delay: 0,
+		showURL: false,
+		showBody: " - "
+	});
+	$('a, input, img').Tooltip();
+});
+</script>
+
+<!-- Desabilitar el click derecho -->
+<script language=JavaScript>
+function inhabilitar(){
+	
+    alert ("Esta función está Desabilitada.")
+    return false
+}
+
+document.oncontextmenu=inhabilitar
+</script>
+
+
+<!-- slider de cabecera -->
+<style type="text/css" media="screen">
+#slider1 {
+    width: 6099px; /* important to be same as image width */
+    height: 300px; /* important to be same as image height */
+    position: relative; /* important */
+	overflow: hidden; /* important */
+}
+
+#slider1Content {
+    width: 600px; /* important to be same as image width or wider */
+    position: absolute;
+	top: 0;
+	margin-left: 0;
+}
+.slider1Image {
+    float: left;
+    position: relative;
+	display: none;
+}
+.slider1Image span {
+    position: absolute;
+	font: 10px/15px Arial, Helvetica, sans-serif;
+    padding: 10px 13px;
+    width: 694px;
+    background-color: #c41616;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color: #fff;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.slider1Image span strong {
+    font-size: 14px;
+}
+.left {
+	top: 0;
+    left: 0;
+	width: 110px !important;
+	height: 280px;
+}
+.right {
+	right: 0;
+	bottom: 0;
+	width: 90px !important;
+	height: 290px;
+}
+ul { list-style-type: none;}
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#slider1').s3Slider({
+            timeOut: 4000 
+        });
+    });
+</script>	
+
+<!-- Para galeria	-->
+<script type="text/javascript">
+	
+		var theInt = null;
+		var $crosslink, $navthumb;
+		var curclicked = 0;
+		
+		theInterval = function(cur){
+			clearInterval(theInt);
+			
+			if( typeof cur != 'undefined' )
+				curclicked = cur;
+			
+			$crosslink.removeClass("active-thumb");
+			$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+			
+			theInt = setInterval(function(){
+				$crosslink.removeClass("active-thumb");
+				$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+				curclicked++;
+				if( 6 == curclicked )
+					curclicked = 0;
+				
+			}, 3000);
+		};
+		
+		$(function(){
+			
+			$("#main-photo-slider").codaSlider();
+			
+			$navthumb = $(".nav-thumb");
+			$crosslink = $(".cross-link");
+			
+			$navthumb
+			.click(function() {
+				var $this = $(this);
+				theInterval($this.parent().attr('href').slice(1) - 1);
+				return false;
+			});
+			
+			theInterval();
+		});
+</script>
+
+
+</head>
+<body>
+   <div id="templatemo_wrapper">
+
+    <div id="templatemo_menu">
+        <ul>
+            
+        </ul>    	
+    </div> 
+   
+    <div id="templatemo_header">
+    
+        <div id="site_title">
+        
+            <h1><a href="#" target="_parent">
+                <img src="images/cabeza.png" title="Venezuela - 200 años de independencia" alt="" />
+                </a></h1>
+            
+        </div> <!-- end of site_title -->
+        
+    </div> <!-- end of templatemo_header -->
+    
+    <div id="templatemo_content_wrapper">
+    
+    	<div id="main_service_section">
+              
+      <div id="slider1">
+        <ul id="slider1Content">
+            <li class="slider1Image">
+                <a href=""><img src="images/wide/1.png" alt="1" /></a>
+                <span class="left"><strong>Bicentenario</strong><br />Venezuela se llena</br>
+                de orgullo 200 años haciendo historia, nacion grande q impulso a la independencia</br>
+                de la america toda</span></li>
+            <li class="slider1Image">
+                <a href=""><img src="images/wide/2.png" alt="2" /></a>
+                <span class="right"><strong>America</strong><br />Todo el continente esta de fiesta pues seguimos luchando hacia la verdadera independencia.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/3.png" alt="3" />
+                <span class="right"><strong>Venezuela</strong><br />Un pueblo que demuestra la gallardia, que lucha y seguira luchando en pro de sus espectativas.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/4.png" alt="4" />
+                <span class="left"><strong>Independencia</strong><br />Ya son 200 años desde aquel maravilloso 5 de julio en el que venezuela se vistio de gloria y alcanzo la libertad.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/5.png" alt="5" />
+                <span class="right"><strong>Para siempre</strong><br />Ahora es nuestro turno para seguir escribiendo la historia de la patria que queremos; libertad e independencia para siempre!</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/6.png" alt="5" />
+                <span class="right"><strong>Caracas</strong><br />Venezuela pario valientes aquel 19 de abril en el que un pueblo entero se also en arras de la igualdad.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/7.png" alt="5" />
+                <span class="right"><strong>Pasion</strong><br />Nuestra nacion demuestra en su gente la pasion que nos dejo la herencia de la historia.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/8.png" alt="5" />
+                <span class="right"><strong>Sonrisa</strong><br />Hoy mas que nunca podemos decir que se nos devolvio aquello que nos pertenecia la sonrisa vuelve al pueblo.</span></li>
+            <li class="slider1Image">
+                <img src="images/wide/9.jpg" alt="5" />
+                <span class="right"><strong>Simón Bolivar</strong><br />Autor de la libertad de un continente un venezolano exepcional, que viva Bolivar!</span></li>
+            <div class="clear slider1Image"></div>
+        </ul>
+    </div>
+  <!-- // slider -->
+                 
+  <!-- // barra -->                 
+            <img  width="880" src="images/franja.png" alt="" />        	
+ <!-- // barra -->
+  
+        	
+        </div> <!-- main_service_section -->
+        
+        <div class="content_section">
+        			<h2 align="center">Celebración del Bicentenario Universidad Rómulo Gallegos</h2>
+                <p align="center	">
+						Ubicada en el municipio Rocio de La capital del estado Guarico (San Juan de los Morros). Destacada así por su arduo labor para la formación de Ingenieros, Lincenciados, Medicos y Enfermeros, todo esto para el beneficio de nuestro país Venezuela.
+					 
+Nos llena de orgullo conmemorar esta ilustre fecha.</p>
+<a href="cronograma.odp" target="_parent"><img src="images/desc.png" alt="image 2"     title="Descargar Cronograma"/></a>
+<br></br>
+
+<div class="section_410 float_l">
+<h2 align="center">Rostros de la Historia</h2>
+<ul class="recent_project">
+<li><a href="javascript:showLightbox();" target="_parent"><img src="images/bolivar.jpg" alt="image 2" title="Simón Bolivar"/></a></li>
+								<div class="more">
+   								<div id="over" class="overbox">
+										<div id="content">
+ <center><p><strong>Simón Bolivar </strong></p><br />
+<p> Simón José Antonio de la Santísima Trinidad Bolívar y Palacios de Aguirre, Ponte-Andrade y Blanco, mejor conocido comoSimón Bolívar, (Caracas, 24 de julio de 1783 — Santa Marta, República de Nueva Granada, 17 de diciembre de 1830) 
+fue un militar y político venezolano de la época pre-republicana de la Capitanía General de Venezuela; fundador de la 
+Gran Colombia y una de las figuras más destacadas de la Emancipación Americana frente al Imperio español. Contribuyó 
+de manera decisiva a la independencia de las actuales Bolivia, Colombia, Ecuador, Panamá, Perú y Venezuela.
+Le fue concedido el título honorífico de Libertador por el Cabildo de Mérida en Venezuela que, tras serle ratificado 
+en Caracas, quedó asociado a su nombre. Los problemas para llevar adelante sus planes fueron tan frecuentes que llegó 
+a afirmar de sí mismo que era "el hombre de las dificultades" en una carta dirigida al general Francisco de Paula 
+Santander en 1825.
+
+Participó en la fundación de la Gran Colombia, nación que intentó consolidar como una gran confederación política y 
+militar en América, de la cual fue Presidente. Bolívar es considerado por sus acciones e ideas el "Hombre de América" 
+y una destacada figura de la Historia Universal, ya que dejó un legado político en diversos países latinoamericanos, 
+algunos de los cuales le han convertido en objeto de veneración nacionalista. Ha recibido honores en varias partes del 
+mundo a través de estatuas o monumentos, parques, plazas, etc.
+</center></p>
+  											<a href="javascript:hideLightbox();">Salir</a>
+										</div>
+									</div>
+									<div id="fade" class="fadebox">&nbsp;</div>                 
+                 			</div>                    
+                    
+<li><a href="javascript:showLightbox4();" target="_parent"><img src="images/miranda.jpg" alt="image 2" title="Francisco de Miranda"/></a></li>
+								<div class="more">
+   								<div id="over4" class="overbox">
+										<div id="content">
+ 											<center><p><strong  align="center">Francisco de Miranda</strong></p><br />
+   										<p>Sebastián Francisco de Miranda Rodríguez (n. Caracas, 28 de marzo de 1750 – m. San Fernando, Cádiz, 14 de julio de 1816) fue un general venezolano, considerado como precursor de la emancipación americana del Imperio español; conocido como «El Primer Venezolano Universal», 
+«El Americano más Universal» y con el nombre abreviado de Francisco de Miranda, fue el creador de la 
+idea de Colombia como nación y combatiente destacado en tres continentes: África, Europa y América.
+
+Viajó durante gran parte de su vida participando en conflictos armados al servicio de diversos 
+países, entre los que destacan tres guerras a favor de la democracia: la Independencia de los Estados 
+Unidos, la Revolución francesa, acontecimiento del que fue protagonista destacado, por lo que le fue 
+otorgado el título de Héroe de la Revolución, y las Guerras de Independencia Hispanoamericana.
+
+Aunque fracasó a la hora de poner en práctica sus proyectos, su ideal político perduró en el tiempo y
+sirvió de base para la fundación de la Gran Colombia y sus ideas independentistas influyeron en destacados líderes de la Emancipación como Simón Bolívar y Bernardo O'Higgins .
+
+Su nombre está grabado en el Arco del Triunfo de París. Su retrato forma parte de la Galería de los 
+Personajes en el Palacio de Versalles; su estatua se encuentra frente a la del General Kellerman en 
+el Campo de Valmy, Francia.</p>											
+											</center>
+  								<a href="javascript:hideLightbox4();">Salir</a>
+										</div>
+									</div>
+									<div id="fade4" class="fadebox">&nbsp;</div>                 
+                 			</div>
+<li><a href="javascript:showLightbox3();" target="_parent"><img src="images/sucre.jpg" alt="image 1" title="Antonio José de Sucre"/></a></li>
+								<div class="more">
+   								<div id="over3" class="overbox">
+										<div id="content">
+ <center><p><strong>Antonio José de Sucre </strong></p><br />
+<p> Antonio José de Sucre y Alcalá, conocido como el «Gran Mariscal de Ayacucho» (Cumaná, estado Sucre; Venezuela, 3 de febrero de 1795 – Montañas de Berruecos, La Unión (Nariño); Colombia, 4 de junio de 1830), fue un político, estadista y militar venezolano, prócer de la independencia, así como presidente de Bolivia, Gobernador de Perú, General en Jefe del Ejército de la Gran Colombia y Comandante del Ejército del Sur. Era hijo de una familia acomodada de tradición militar, siendo su padre coronel del Ejército realista. Es considerado como uno de los militares más completos entre los próceres de la independencia suramericana
+</center></p>
+  			<a href="javascript:hideLightbox3();">Salir</a>
+										</div>
+									</div>
+									<div id="fade3" class="fadebox">&nbsp;</div>                 
+                 			</div>
+                  
+                  <li><a href="javascript:showLightbox5();" target="_parent"><img src="images/paez.jpg" alt="image 2" title="José Antonio Páez"/></a></li>
+								<div class="more">
+   								<div id="over5" class="overbox">
+										<div id="content">
+ <center><p><strong>José Antonio Páez </strong></p><br />
+<p> José Antonio Páez Herrera (Curpa, Portuguesa, 13 de junio de 1790 - Nueva York, Estados Unidos, 6 de 
+mayo de 1873) fue un militar y político venezolano, presidente de la República en tres ocasiones 
+(1830-1835; 1839-1843; 1861-1863).
+
+Fue uno de los más destacados próceres de la emancipación de Venezuela y se le considera entre los 
+principales representantes del caudillismo americano. Fue protagonista del nacimiento de la república 
+y colaboró en la creación de los símbolos patrios, de la iconografía procera y territorial de 
+Venezuela y de Colombia. Fue uno de los ideólogos de la consolidación del Estado de Venezuela. Fue 
+tío del pintor venezolano Carmelo Fernández Páez.
+</center></p>
+  											<a href="javascript:hideLightbox5();">Salir</a>
+										</div>
+									</div>
+									<div id="fade5" class="fadebox">&nbsp;</div>                 
+                 			</div>
+                  <li><a href="javascript:showLightbox2();" target="_parent"><img src="images/roscio.jpg" alt="image 2" title="Juan Germán Roscio"/></a></li>
+								<div class="more">
+   								<div id="over2" class="overbox">
+										<div id="content">
+ 											<center><p><strong  align="center">Juan Germán Roscio Nieves</strong></p><br />
+   										<p>Juan Germán Roscio Nieves fue un abogado, periodista, escritor y político venezolano. Nació en San Francisco de Tiznados
+(actual Estado Guárico) el 27 de mayo de 1763, y murió en Cúcuta (Colombia), el 10 de marzo de 1821. Fue redactor de La
+Gazeta de Caracas y Director del Correo del Orinoco, Primer Canciller, jefe del ejecutivo durante la Primera República
+de Venezuela, inspirador y redactor del Acta de Proclamación de la Independencia (19 de abril de 1810), del Acta de la
+Independencia (5 de julio de 1811), del Reglamento Electoral para la elección del Primer Congreso; de la Primera
+Constitución, Presidente del Congreso de Angostura de 1819 y vicepresidente de la Gran Colombia.
+
+Primeros años:
+
+Hijo de José Cristóbal Roscio, oficial retirado de origen italiano, y de Paula María Nieves,mestiza nativa de La Victoria,
+los primeros años de Juan Germán transcurrieron en San Francisco de Tiznados, donde su padre poseía una propieda agrícola.
+Viajó a Caracas en 1774 para iniciar sus estudios superiores bajo la protección de la hija del Conde de San Javier. Durante
+este período, cursó estudios de Teología, Sagrados Cánones y Derecho Civil. En 1794 obtuvo el título de Doctor en Derecho
+Canónico, y en 1800 el de Civil.
+
+Roscio llegó a Estados Unidos después de estar en Jamaica. Su obra Triunfo de la libertad sobre el despotismo se
+publicó en Filadelfia en 1817, y en 1818 se encontraba en Angostura apoyando a Simón Bolívar en la reconstitución de
+la República de Venezuela y en la creación de la Gran Colombia. Durante este lapso se desempeñó como Director General
+de Rentas, Presidente del Congreso de Angostura, Vicepresidente del Departamento de Venezuela y Vicepresidente de
+Colombia la Grande. Ocupaba este último cargo cuando murió, en vísperas de celebrarse el Congreso de Cúcuta.
+
+Murió en Cúcuta cuando se desempeñaba como vicepresidente de Gran Colombia el 10 de marzo de 1821.a las 3 am.</p>											
+											</center>
+  								<a href="javascript:hideLightbox2();">Salir</a>
+										</div>
+									</div>
+									<div id="fade2" class="fadebox">&nbsp;</div>                 
+                 			</div>
+                    <li><a href="javascript:showLightbox6();" target="_parent"><img src="images/rodriguez.jpg" alt="image 2" title="Simón Rodríguez"/></a></li>
+								<div class="more">
+   								<div id="over6" class="overbox">
+										<div id="content">
+ <center><p><strong>Simón Rodríguez </strong></p><br />
+<p> Simón Rodríguez nació en Caracas la noche del 28 de octubre de 1769. Fue bautizado el 14 de noviembre
+de ese año como niño expósito. Criado en casa del sacerdote Alejandro Carreño, toma de él su apellido
+y es conocido como Simón Carreño Rodríguez. Documentos de la época y otros testimonios hacen pensar 
+que el sacerdote era en efecto padre de Simón Rodríguez y de su hermano José Cayetano Carreño, 
+cuatro años menor que él y quien se desarrollara como notable músico. Su madre Rosalía Rodríguez 
+era hija de un propietario de haciendas y ganado, descendiente de canarios.
+
+En mayo de 1791 el Cabildo de Caracas le da un puesto como profesor en la “Escuela de Lectura y 
+Escritura para niños”, en 1794 presentó un escrito crítico “Reflexiones sobre los defectos que vician 
+a escuela de primeras letras en Caracas y medios de lograr su reforma por un nuevo establecimiento”. 
+En esta escuela tiene la oportunidad de ser el tutor del futuro Libertador Simón Bolívar. Fuertemente 
+influenciado por El Emilio de Jean-Jacques Rousseau, Simón Rodríguez desarrolla una revolucionaria 
+concepción de lo que debe ser el modelo educativo de las nacientes naciones americanas. El mismo 
+Bolívar en carta al general Santander en 1824 decía que su maestro "enseñaba divirtiendo". Este 
+espíritu que intentaba romper con las rígidas costumbres educativas del colonialismo español se 
+reflejaría en toda la obra y el pensamiento de Simón Rodríguez.
+</center></p>
+  											<a href="javascript:hideLightbox6();">Salir</a>
+										</div>
+									</div>
+									<div id="fade6" class="fadebox">&nbsp;</div>                 
+                 			</div> 
+                </ul> 	
+		                 
+</div>        
+
+                
+ <div class="section_410 float_r">
+<div id="page-wrap">
+<h2 align="center">Galeria bicentenaria</h2>
+
+  <div class="slider-wrap">
+		<div id="main-photo-slider" class="csw">
+			<div class="panelContainer">
+
+				<div class="panel" title="Panel 1">
+					<div class="wrapper">
+						<img src="images/galeria/1.jpg" alt="temp" />
+						
+					</div>	
+				</div>
+				<div class="panel" title="Panel 2">
+					<div class="wrapper">
+						<img src="images/galeria/2.png" alt="temp" />
+						
+					</div>
+				</div>		
+				<div class="panel" title="Panel 3">
+					<div class="wrapper">
+						
+						<img src="images/galeria/3.jpg" alt="scotch egg" class="floatLeft"/>
+					
+					</div>
+				</div>
+				<div class="panel" title="Panel 4">
+					<div class="wrapper">
+						<img src="images/galeria/4.jpg" alt="temp" />
+						
+					</div>
+				</div>
+				<div class="panel" title="Panel 5">
+					<div class="wrapper">
+						<img src="images/galeria/5.jpg" alt="temp" />
+						
+					</div>
+				</div>
+				<div class="panel" title="Panel 6">
+					<div class="wrapper">
+						<img src="images/galeria/6.jpg" alt="temp" />
+						
+						</div>
+				</div>
+
+			</div>
+		</div>
+
+		<a href="#1" class="cross-link active-thumb"><img src="images/galeria/1-thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a>
+		<div id="movers-row">
+			<div><a href="#2" class="cross-link"><img src="images/galeria/2-thumb.png" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#3" class="cross-link"><img src="images/galeria/3-thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#4" class="cross-link"><img src="images/galeria/4-thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#5" class="cross-link"><img src="images/galeria/5-thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+			<div><a href="#6" class="cross-link"><img src="images/galeria/6-thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+		</div>
+
+	</div>
+	
+	</div>	                
+            </div>
+            </div>
+           
+        
+        <div class="cleaner_h20"></div>
+    
+    </div> <!-- end of templatemo_content_wrapper -->
+    
+    <div id="templatemo_footer">
+
+        <ul class="footer_menu">
+            <li><a href="http://www.unerg.edu.ve/" target="_parent">UNERG</a></li>
+            <li><a href="http://twitter.com/UNERGWEB" target="_blank">UNERGWEB</a></li>
+        	   <li><a href="http://www.unerg.edu.ve/images/stories/enlaces/alma_mater.png" target="_parent">ALMA MATER</a></li>
+            <li><a href="http://www.mes.gov.ve" target="_parent">MES</a></li>
+            <li><a href="http://www.gobiernoenlinea.ve/" target="_blank">GOBIERNO EN LINEA</a></li>
+       </ul>
+    
+        Cretive comons © 2011 <a href="#">JED</a> | 
+        Diseñado por <a href="#" target="_parent">Dehivix</a> 
+    </div> <!-- end of footer -->
+
+</div> <!-- end of templatemo_wrapper -->
+</body>
+</html>

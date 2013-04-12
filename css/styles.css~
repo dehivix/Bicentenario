@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+/*este es el estilo para entrar en foro con lighbox*/
+
+.fadebox {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 255%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+.overbox {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	width: 50%;
+	height: 90%;
+	z-index:1002;
+	overflow: auto;
+}
+
+#content {
+	background: #FFFFFF;
+	border: solid 3px #CCCCCC;
+	padding: 10px;
+}
+
+
+/*fin del este lighbox*/
+input, textarea {
+    padding: 2px 5px;
+    border: 1px solid #EBEBEB;
+    font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #6B6B6B;
+
+}
